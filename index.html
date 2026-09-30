@@ -34,6 +34,9 @@
     .grid { display:grid; gap:1rem; }
     .cards { grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
     .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:1.1rem 1.15rem; }
+    .still { padding:0 0 1rem; overflow:hidden; }
+    .still img { width:100%; height:220px; object-fit:cover; border-radius:12px 12px 0 0; background:#e8e4db; }
+    .still .pad { padding:.9rem 1rem 0; }
     .reel video { width:100%; max-height:520px; border-radius:12px; background:#111; }
     .jobs { list-style:none; padding:0; margin:0; }
     .jobs li { padding:.7rem 0; border-bottom:1px solid var(--line); }
@@ -89,10 +92,24 @@
         <p class="kicker">Campus b-roll and digital content</p>
         <h2>How I would handle a shoot day</h2>
         <div class="card reel" style="margin-top:1rem">
-          <h3>Sample b-roll — campus study lounge</h3>
-          <p>No AI avatar. Quiet establishing clip an editor can sit under a lower-third or event title.</p>
-          <video controls playsinline muted loop src="https://rishabh-alt.github.io/sapc-dmc/gemini_generated_video_a9d31586.mp4">Your browser does not support video.</video>
+          <h3>Sample b-roll — kit check before load-in</h3>
+          <p>Camera, shotgun, battery, cable. The kind of establishing clip that proves you can set a frame and hold it.</p>
+          <video controls playsinline muted loop poster="kit-setup.jpg" src="kit-setup.mp4">Your browser does not support video.</video>
           <p class="note">B-roll sample only. Not an official Portage College video.</p>
+        </div>
+        <div class="grid cards" style="margin-top:1rem">
+          <article class="card still">
+            <img src="kit-setup.jpg" alt="Camera, microphone, battery and cable laid out for an event" />
+            <div class="pad"><h3>Setup</h3><p>Gear on the table before the room fills.</p></div>
+          </article>
+          <article class="card still">
+            <img src="logging-edit.jpg" alt="Laptop, drive and shot list for logging footage" />
+            <div class="pad"><h3>Log and draft</h3><p>Rename, tag, hand a rough cut to Communications.</p></div>
+          </article>
+          <article class="card still">
+            <img src="gym-broll-still.jpg" alt="Empty gym corridor with late light" />
+            <div class="pad"><h3>Event space</h3><p>Arrive early. Shoot the room before the crowd.</p></div>
+          </article>
         </div>
         <div class="grid cards" style="margin-top:1rem">
           <article class="card"><h3>1. Capture</h3><p>Arrive early, check battery and cards, grab room tone and a wide of the space, then shoot the action.</p></article>
