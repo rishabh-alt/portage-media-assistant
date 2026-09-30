@@ -17,7 +17,8 @@
     .wrap { width:min(1040px, calc(100% - 2rem)); margin:0 auto; }
     header { position:sticky; top:0; z-index:20; background:rgba(246,243,234,.94); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
     .nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.8rem 0; }
-    .brand { font-weight:700; color:var(--navy); text-decoration:none; }
+    .brand { font-weight:700; color:var(--navy); text-decoration:none; outline:none; }
+    .brand:focus, .brand:focus-visible { outline:none; box-shadow:none; }
     .nav-links { display:flex; gap:1rem; flex-wrap:wrap; }
     .nav-links a { text-decoration:none; color:var(--navy); }
     .btn { display:inline-block; text-decoration:none; font-weight:700; background:var(--green); color:#fff; padding:.7rem 1rem; border-radius:999px; }
@@ -33,7 +34,10 @@
     section { padding:2.1rem 0; }
     .grid { display:grid; gap:1rem; }
     .cards { grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
+    .trio { grid-template-columns:repeat(3,1fr); }
+    @media (max-width:800px) { .trio { grid-template-columns:1fr; } }
     .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:1.1rem 1.15rem; }
+    .break { overflow-wrap:anywhere; }
     .still { padding:0 0 1rem; overflow:hidden; }
     .still img { width:100%; height:220px; object-fit:cover; border-radius:12px 12px 0 0; background:#e8e4db; }
     .still .pad { padding:.9rem 1rem 0; }
@@ -140,11 +144,10 @@
       <div class="wrap">
         <p class="kicker">Logistics</p>
         <h2>Availability</h2>
-        <div class="grid cards">
+        <div class="grid trio">
           <article class="card"><h3>Hours</h3><p>Casual Student Media Assistant hours. Flexible around CSW classes, including some evenings and weekend events.</p></article>
           <article class="card"><h3>Location</h3><p>Lac La Biche campus. Ready to work on-site with Corporate Communications.</p></article>
-          <article class="card"><h3>Email</h3><p>Available on email anytime.</p></article>
-          <article class="card"><h3>Check</h3><p>Able to complete a police information check if selected.</p></article>
+          <article class="card"><h3>Contact</h3><p class="break">Available on email anytime.<br>187541@mymail.portagecollege.ca<br>+1 604 367 7660</p></article>
         </div>
       </div>
     </section>
@@ -153,7 +156,7 @@
     <div class="wrap">
       <p class="kicker" style="color:#d4c08a">Let’s connect</p>
       <h2>Rishabh Deol</h2>
-      <p class="lede">Lac La Biche, AB · +1 604 367 7660</p>
+      <p class="lede break">Lac La Biche, AB · +1 604 367 7660 · 187541@mymail.portagecollege.ca</p>
       <div class="actions">
         <a class="btn" href="mailto:187541@mymail.portagecollege.ca">Email me</a>
       </div>
