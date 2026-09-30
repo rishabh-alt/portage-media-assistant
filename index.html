@@ -13,6 +13,7 @@
     html { scroll-behavior:smooth; }
     body { margin:0; font-family:"Source Sans 3",system-ui,sans-serif; color:var(--ink); background:var(--paper); line-height:1.55; }
     a { color:var(--green-dark); }
+    img, video { max-width:100%; display:block; }
     .wrap { width:min(1040px, calc(100% - 2rem)); margin:0 auto; }
     header { position:sticky; top:0; z-index:20; background:rgba(246,243,234,.94); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
     .nav { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.8rem 0; }
@@ -20,7 +21,6 @@
     .nav-links { display:flex; gap:1rem; flex-wrap:wrap; }
     .nav-links a { text-decoration:none; color:var(--navy); }
     .btn { display:inline-block; text-decoration:none; font-weight:700; background:var(--green); color:#fff; padding:.7rem 1rem; border-radius:999px; }
-    .btn.ghost { background:transparent; color:var(--navy); border:2px solid var(--navy); }
     .hero { padding:3.1rem 0 2.2rem; }
     .kicker { text-transform:uppercase; letter-spacing:.14em; font-size:.76rem; color:var(--green); font-weight:700; }
     h1,h2,h3 { font-family:"Source Serif 4",Georgia,serif; color:var(--navy); line-height:1.15; margin:.3rem 0 .55rem; }
@@ -34,6 +34,7 @@
     .grid { display:grid; gap:1rem; }
     .cards { grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
     .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:1.1rem 1.15rem; }
+    .reel video { width:100%; max-height:520px; border-radius:12px; background:#111; }
     .jobs { list-style:none; padding:0; margin:0; }
     .jobs li { padding:.7rem 0; border-bottom:1px solid var(--line); }
     footer { background:var(--navy); color:#e7eef6; padding:2.3rem 0 2.6rem; margin-top:1rem; }
@@ -66,7 +67,7 @@
           <span class="chip">Open until filled</span>
         </div>
         <div class="actions">
-          <a class="btn" href="#work">See how I’d support the team</a>
+          <a class="btn" href="#media">Watch sample b-roll</a>
         </div>
         <p class="note">This site is an application sample. It is not official Portage College communications. Apply through careers@portagecollege.ca.</p>
       </div>
@@ -87,10 +88,16 @@
       <div class="wrap">
         <p class="kicker">Campus b-roll and digital content</p>
         <h2>How I would handle a shoot day</h2>
+        <div class="card reel" style="margin-top:1rem">
+          <h3>Sample b-roll — campus study lounge</h3>
+          <p>No AI avatar. Quiet establishing clip an editor can sit under a lower-third or event title.</p>
+          <video controls playsinline muted loop src="https://rishabh-alt.github.io/sapc-dmc/gemini_generated_video_a9d31586.mp4">Your browser does not support video.</video>
+          <p class="note">B-roll sample only. Not an official Portage College video.</p>
+        </div>
         <div class="grid cards" style="margin-top:1rem">
-          <article class="card"><h3>1. Capture</h3><p>Arrive early, check battery and cards, grab room tone and a wide of the space, then shoot the action. No talking-head avatars. Real campus rooms and real events.</p></article>
-          <article class="card"><h3>2. Log the same night</h3><p>Rename clips, drop a one-line shot list, flag anything with a student who did not consent to being featured, and park files in the College repository structure the team already uses.</p></article>
-          <article class="card"><h3>3. Draft, don’t publish</h3><p>Cut a rough select, write a caption, and send it to Corporate Communications. Publishing stays with the media team.</p></article>
+          <article class="card"><h3>1. Capture</h3><p>Arrive early, check battery and cards, grab room tone and a wide of the space, then shoot the action.</p></article>
+          <article class="card"><h3>2. Log the same night</h3><p>Rename clips, write a one-line shot list, flag anyone who did not consent, park files where the team already stores media.</p></article>
+          <article class="card"><h3>3. Draft, don’t publish</h3><p>Cut a rough select, write a caption, send it to Corporate Communications. Publishing stays with the media team.</p></article>
         </div>
         <div class="card" style="margin-top:1rem">
           <h3>Sample caption — campus event stills</h3>
@@ -109,7 +116,7 @@
           <article class="card"><h3>Tools</h3><p>Canva, basic photo and video edit, Microsoft Office and Teams, Instagram and Facebook. Ready to learn the College’s logging and edit workflow.</p></article>
         </div>
         <ul class="jobs card" style="margin-top:1rem">
-          <li><strong>Food Counter Attendant and Cook</strong> — Momos &amp; More, Edmonton · Feb 2025–present</li>
+          <li><strong>Food Counter Attendant and Cook</strong> — Momos & More, Edmonton · Feb 2025–present</li>
           <li><strong>Food Counter Attendant</strong> — Chicken Chemistry, Edmonton · Feb 2024–present</li>
           <li><strong>Cook</strong> — Italian Affairs, Edmonton · Jun 2023–Jan 2025</li>
           <li><strong>Sales associate / sales</strong> — The Source, chatr wireless, Crate and Barrel, Esso, Pacific Centre · Vancouver area, 2016–2021</li>
